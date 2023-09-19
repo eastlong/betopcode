@@ -7,6 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="juc-itheima" />
+        <module name="coding" />
+        <module name="design-pattern" />
         <module name="learn-guc" />
         <module name="sword-offer" />
       </profile>
