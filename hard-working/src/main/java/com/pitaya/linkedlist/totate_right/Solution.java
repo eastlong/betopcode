@@ -19,8 +19,8 @@ public class Solution {
 
         k = k % n; // 防止k超过链表长度
         ListNode p = head;
-        for (int i = 0; i < n-k-1; i++) {
-            p = p.next;
+        for (int i = 0; i < n-k-1; i++) { //
+            p = p.next; // p是临界点
         }
 
         // 节点移动
@@ -30,5 +30,4 @@ public class Solution {
 
         return head; // 返回新的头节点
     }
-
 }

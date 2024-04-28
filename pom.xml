@@ -14,6 +14,7 @@
         <module>sword-offer</module>
         <module>coding</module>
         <module>design-pattern</module>
+        <module>java-advanced</module>
     </modules>
 
     <properties>
