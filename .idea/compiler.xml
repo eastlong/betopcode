@@ -6,11 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="juc-itheima" />
         <module name="java-advanced" />
         <module name="hard-working" />
         <module name="design-pattern" />
         <module name="learn-guc" />
+        <module name="system-design" />
+        <module name="juc-itheima" />
         <module name="sword-offer" />
       </profile>
     </annotationProcessing>

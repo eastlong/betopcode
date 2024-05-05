@@ -1,4 +1,4 @@
-package com.pitaya;
+package com.pitaya.string;
 
 import java.util.HashMap;
 import java.util.Map;
