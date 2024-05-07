@@ -16,8 +16,8 @@ public class IsValid {
             put('}', '{');
         }};
         int n = s.length();
-        Stack<Character> stack = new Stack<>();
-        for (int i = 0; i < n; i++) {
+        Stack<Character> stack = new Stack<>(); // 栈里面存放的都是map的key，匹配则key出栈。比如：({[]}) ({[会入栈
+        for (int i = 0; i < n; i++) { // ({[]})
             char ch = s.charAt(i);
             if (pairs.containsKey(ch)) { // 如果pair中不存在，则应该对应的是val
                 if (stack.peek() != pairs.get(ch)) { // 判断val 是否与栈顶相等，相等则抵消
