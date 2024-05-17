@@ -3,7 +3,7 @@ package com.pitaya.linkedlist;
 import com.pitaya.common.ListNode;
 
 /**
- * @Description:
+ * @Description: 移除链表元素
  * @Date 2024/05/15 08:28:00
  **/
 public class RemoveElements {
@@ -12,8 +12,17 @@ public class RemoveElements {
 
         ListNode dummy = new ListNode(-1, head);
         ListNode pre = dummy;
+        ListNode cur = head;
+        while (cur != null) {
+            if (cur.val == val) {
+                pre.next = cur.next; // 移除元素
+            } else {
+                pre = cur; // 如果不是val，只需要继续执行 （pre前移动）
+            }
+            cur = cur.next; // cur 迁移
+        }
 
-
+        return dummy.next;
     }
 }
 

@@ -27,7 +27,7 @@ public class ThreeSum {
             if (i > 0 && nums[i] == nums[i-1]) continue; // 遇到相同的值，跳过，因为上一轮已经计算过了
 
             int cur = nums[i];
-            int L = i + 1; // 数字不能重复，从i+1开始
+            int L = i + 1; // 数字不能重复，从i+1开始 （三个数：cur、L、R）
             int R = len - 1;
             while (L < R) {
                 int tmp = cur + nums[L] + nums[R];
@@ -48,7 +48,6 @@ public class ThreeSum {
                     R--;
                 }
             }
-
         }
 
         return res;

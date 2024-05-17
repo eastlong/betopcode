@@ -9,7 +9,7 @@ public class SortedSquares {
         int right = nums.length - 1;
         int left = 0;
         int[] result = new int[nums.length];
-        int index = result.length - 1; // 从最后面开始赋值
+        int index = result.length - 1; // 从最后面开始赋值 ==> 为什么从最后开始？因为L、R作为边界来说，他们的平方肯定是大值，平方的min值应该再数组中间位置
         while (left <= right) {
             if (nums[left] * nums[left] > nums[right] * nums[right]) {
                 result[index--] = nums[left] * nums[left];
