@@ -21,7 +21,7 @@ public class RandomizedSet {
     public boolean insert(int val) {
         if (map.containsKey(val)) return false;
 
-        map.put(val, list.size());
+        map.put(val, list.size()); // map：(val, index)
         list.add(val);
 
         return true;
