@@ -28,11 +28,11 @@ public class IslandPerimeter {
             return 1;
         }
 
-        if (grid[r][c] != 1) { // 已经走过的节点会置为-1， 周长不变化
+        if (grid[r][c] != 1) { // （这里只可能是-1了）已经走过的节点会置为-1， 周长不变化
             return 0;
         }
 
-        grid[r][c] = -1; //  // 走到这里，表示的是陆地，置为-1
+        grid[r][c] = -1; //  // 走到这里，表示的是陆地1，置为-1，陆地实际对周长没影响
         return dfs(grid, r - 1, c) +
                 dfs(grid, r+1, c) +
                 dfs(grid, r, c - 1) +

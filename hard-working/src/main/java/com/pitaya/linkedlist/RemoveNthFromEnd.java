@@ -15,7 +15,7 @@ public class RemoveNthFromEnd {
         for (int i = 0; i < length - n; i++) {
             cur = cur.next;
         }
-        cur.next = cur.next.next;
+        cur.next = cur.next.next; // 删除倒数第N个节点
         return dummy.next;
     }
 

@@ -13,7 +13,7 @@ public class NumIslands {
             for (int j = 0; j < grid[0].length; j++) {
                 // 取出所有的陆地
                 if (grid[i][j] == '1') { // 等于0的情况直接跳过了,因为是水域
-                    dfs (grid, i, j);
+                    dfs (grid, i, j); // 深度有限遍历，目标是把该岛屿遍历结束。
                     count ++;
                 }
             }
