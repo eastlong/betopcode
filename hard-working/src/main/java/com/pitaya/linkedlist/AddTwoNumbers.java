@@ -4,7 +4,8 @@ import com.pitaya.common.ListNode;
 
 
 /**
- * @Description:
+ * @Description: 两数相加
+ * 2
  * @Date 2023/09/18 06:32:00
  **/
 public class AddTwoNumbers {
@@ -27,6 +28,7 @@ public class AddTwoNumbers {
             if (l2 != null) l2 = l2.next;
         }
 
+        // 最后要确认进位
         if (carry == 1) cur.next = new ListNode(carry);
 
         return prev.next;

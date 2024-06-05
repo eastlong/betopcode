@@ -4,8 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @Description:
- *
+ * @Description: 无重复字符的最长子串
+ * 3
  *  s = "abcabcbb" --> 3
  * @Date 2023/09/16 15:43:00
  **/
@@ -18,12 +18,11 @@ public class LengthOfLongestSubstring {
      * @return
      */
     public static int lengthOfLongestSubstring(String s) {
-        if (s.length() == 0)
-            return 0;
+        if (s.length() == 0) return 0;
 
         Map<Character, Integer> map = new HashMap<>(); // key：字符; value：字符所在的位置，且为最新的位置
         int max = 0;
-        int left = 0;
+        int left = 0; // 滑动窗口的左边
         for (int i = 0; i < s.length(); i++) {
             // 如果key在map中存在，left需要更新，把队列的左边的元素移出就行了
             if (map.containsKey(s.charAt(i))) {

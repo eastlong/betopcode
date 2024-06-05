@@ -1,10 +1,19 @@
 package com.pitaya.array;
 
 /**
- * @Description:
+ * @Description: 螺旋矩阵II
+ * 59
  * @Date 2024/05/15 07:55:00
  **/
 public class GenerateMatrix {
+    public int[][] generateMatrix(int n) {
+        int[][] nums = new int[n][n];
+        int startX = 0; int startY = 0;
+
+
+
+        return null;
+    }
 }
 
 /**

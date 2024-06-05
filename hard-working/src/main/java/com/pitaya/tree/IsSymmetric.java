@@ -17,7 +17,7 @@ public class IsSymmetric {
 
 
     /**
-     * 递归判断
+     * 递归判断,判断两个节点，是否对称
      * @param node1
      * @param node2
      * @return

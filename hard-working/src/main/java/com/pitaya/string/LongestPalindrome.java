@@ -15,8 +15,8 @@ public class LongestPalindrome {
         boolean[][] dp = new boolean[len][len];
         char[] charArray = s.toCharArray();
         // 递推开始 （下面的步骤主要是来地推dp[i][j]）
-        // 先枚举子串长度
-        for (int L = 2; L <=len; L++) {
+        // 先枚举子串长度 L
+        for (int L = 2; L<=len; L++) {
             // 枚举左边界，左边界的上限设置可以宽松一些
             for (int i = 0; i < len; i++) {
                 // 由L 和 i可以确定右边界，j-i+1=L

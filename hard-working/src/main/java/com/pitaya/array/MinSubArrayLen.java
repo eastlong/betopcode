@@ -1,7 +1,7 @@
 package com.pitaya.array;
 
 /**
- * @Description: 长度最小的子数组
+ * @Description: 长度最小的子数组（连续）
  * @Date 2024/05/14 22:03:00
  **/
 public class MinSubArrayLen {

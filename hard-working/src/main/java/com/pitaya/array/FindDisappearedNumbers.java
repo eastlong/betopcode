@@ -12,8 +12,8 @@ public class FindDisappearedNumbers {
     public static List<Integer> findDisappearedNumbers(int[] nums) {
         int n = nums.length;
         for (int num : nums) {
-            int idx = (num - 1) % n; // 实际上是计算 num 的索引
-            nums[idx] += n; // 加i主要是为了后面能与n进行判断，消失的数字，对应的位置肯定是 <= n
+            int idx = (num - 1) % n; // 实际上是计算 num 的索引， 比如：n=8, num=5 ，这里就有: idx = 4,即 5 应该出现在nums[4]
+            nums[idx] = nums[idx] + n; // 加i主要是为了后面能与n进行判断，消失的数字，对应的位置肯定是 <= n
         }
         List<Integer> ret = new ArrayList<Integer>();
         for (int i = 0; i < n; i++) {
@@ -40,6 +40,7 @@ public class FindDisappearedNumbers {
  *
  * 输入：nums = [4,3,2,7,8,2,3,1]
  * 输出：[5,6]
+ *
  * 示例 2：
  *
  * 输入：nums = [1,1]

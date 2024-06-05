@@ -12,7 +12,7 @@ public class MaxAreaOfContainer {
             int area = Math.min(height[left], height[right]) * (right -left);
             ans = Math.max(ans, area);
             if (height[left] <= height[right]) {
-                left ++;
+                left ++; // left,right 谁大谁不动
             } else {
                 right --;
             }

@@ -21,7 +21,7 @@ public class DiameterOfBinaryTree {
         int Left = depth(node.left);
         int Right = depth(node.right);
         ans = Math.max(Left + Right, ans); //将每个节点最大直径(左子树深度+右子树深度)当前最大值比较并取大者
-        return Math.max(Left, Right) + 1;
+        return Math.max(Left, Right) + 1; // 这里已经计算了根节点的深度
     }
 }
 
