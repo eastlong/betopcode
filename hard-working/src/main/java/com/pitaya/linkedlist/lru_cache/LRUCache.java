@@ -1,6 +1,6 @@
 package com.pitaya.linkedlist.lru_cache;
 
-import com.pitaya.linkedlist.totate_right.ListNode;
+
 
 import java.util.HashMap;
 import java.util.Map;

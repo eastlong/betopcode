@@ -19,9 +19,10 @@ public class AddTwoNumbers {
             int y = l2 == null ? 0 : l2.val;
             int sum = x + y + carry;
 
-            carry = sum / 10;
-            sum = sum % 10;
-            cur.next = new ListNode(sum);
+            // 更新变量
+            carry = sum / 10;  // 进位
+            sum = sum % 10; // 当前位
+            cur.next = new ListNode(sum); // 下一位
             cur = cur.next;
 
             if (l1 != null) l1 = l1.next;

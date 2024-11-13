@@ -23,9 +23,10 @@ public class IsValid {
                 if (stack.peek() != pairs.get(ch)) { // 判断val 是否与栈顶相等，相等则抵消
                     return false;
                 }
+                // pair中key对应的val恰好跟stack上的top相等，则是有效的括号
                 stack.pop();
             } else {
-                stack.push(ch);
+                stack.push(ch); // 左括号入栈
             }
         }
 
