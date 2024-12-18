@@ -74,6 +74,7 @@ public class LongestPalindrome {
 
 
     /**
+     * 中心扩散法
      * 这个方法的功能是以给定的left和right为中心，向左右两边扩展，找到最长的回文子串的长度。
      * @param s             输入的字符串
      * @param left          起始的左边界

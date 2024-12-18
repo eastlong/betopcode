@@ -8,12 +8,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="java-advanced" />
         <module name="hard-working" />
-        <module name="design-pattern" />
         <module name="learn-guc" />
         <module name="system-design" />
-        <module name="juc-itheima" />
         <module name="sword-offer" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="design-pattern" target="1.8" />
+      <module name="juc-itheima" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

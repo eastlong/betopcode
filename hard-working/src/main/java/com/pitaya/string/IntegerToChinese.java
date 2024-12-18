@@ -84,6 +84,8 @@ public class IntegerToChinese {
     public static void main(String[] args) {
         int[] testNumbers = {0, 32567, 1001, 10001, 100000001, 1234567890};
 
+        int[] lessNumbers = {0, 100, 1001, 2345,78,1, 1000};
+
         for (int num : testNumbers) {
             System.out.println(numberToChinese(num));
         }
