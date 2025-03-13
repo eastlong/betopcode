@@ -16,15 +16,14 @@ public class DailyTemperatures {
         int[] result = new int[length];
 
         for (int i = 0; i < length; i++) {
-            // 出栈的条件：（1）栈非空；（2）当前温度>栈顶温度(下一个更高温度:i是pre的下一个高温)
+            // 出栈的条件：（1）栈非空；（2）当前温度>栈顶温度(下一个更高温度:i是pre的下一个高温的索引)
             // 如果栈不为空，并且当前温度大于栈顶温度，则说明当前温度是栈顶温度的下一个更高温度，
             while (!stack.isEmpty() && T[i] > T[stack.peek()]) {
                 int pre = stack.pop();
-                result[pre] = i - pre;
+                result[pre] = i - pre; // i-pre 表示的是下一个温度是几天后
             }
             // 若栈为空，或者栈顶元素对应的温度小于等于当前温度，然后将 i 进栈
             stack.add(i); // 注意，这里加入的是索引i
-
         }
         return result;
     }

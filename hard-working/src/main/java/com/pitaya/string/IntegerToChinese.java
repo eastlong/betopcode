@@ -20,13 +20,13 @@ public class IntegerToChinese {
         boolean zeroFlag = false; // 标记是否遇到了零
 
         while (num > 0) {
-            int digit = num % 10;
-            if (digit != 0) {
-                if (zeroFlag) {
+            int digit = num % 10;// 取出最后一位数字
+            if (digit != 0) { // 如果数字不为0，才会加入中文，否则遇到0，zeroFlag置为true，然后跳过
+                if (zeroFlag) { // 如果之前遇到了零，补一个“零”
                     sb.insert(0, CN_NUMBERS[0]);
                 }
                 sb.insert(0, CN_NUMBERS[digit] + CN_UNITS[unitPos]); // 拼接数字和单位，比如：八十
-                zeroFlag = false;
+                zeroFlag = false; // 因为digit != 0，所以zeroFlag一定要及时更新
             } else {
                 zeroFlag = true; // 遇到了零，但不立即添加，因为要考虑连续零的情况
             }
@@ -49,12 +49,12 @@ public class IntegerToChinese {
         }
 
         StringBuilder sb = new StringBuilder();
-        int unitPos = 0;
+        int unitPos = 0; // 当前处理的大单位（万、亿、兆）
         boolean zeroFlag = false; // 标记当前段是否为零（用于处理连续的零段）
 
         while (num > 0) {
-            int part = num % 10000;
-            String partInChinese = convertLessThanTenThousand(part);
+            int part = num % 10000;// 取出当前段的数字（每段4位）
+            String partInChinese = convertLessThanTenThousand(part);// 将当前段转换为中文
 
             // 如果当前段不为零，或者之前段为零但当前段不为零（即不是连续的零段），则添加到结果中
             if (!partInChinese.equals(CN_NUMBERS[0]) || !zeroFlag) {
